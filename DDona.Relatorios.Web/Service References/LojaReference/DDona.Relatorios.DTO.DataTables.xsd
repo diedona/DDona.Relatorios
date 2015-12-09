@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.DataTables" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.DataTables" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.Loja" />
+  <xs:complexType name="DatatablesModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="columns" nillable="true" type="tns:ArrayOfDatatablesColumnModelDTO" />
+      <xs:element minOccurs="0" name="draw" type="xs:int" />
+      <xs:element minOccurs="0" name="length" type="xs:int" />
+      <xs:element minOccurs="0" name="order" nillable="true" type="tns:ArrayOfDatatablesOrderModelDTO" />
+      <xs:element minOccurs="0" name="search" nillable="true" type="tns:DatatablesColumnSearchModelDTO" />
+      <xs:element minOccurs="0" name="start" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatatablesModelDTO" nillable="true" type="tns:DatatablesModelDTO" />
+  <xs:complexType name="ArrayOfDatatablesColumnModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatatablesColumnModelDTO" nillable="true" type="tns:DatatablesColumnModelDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatatablesColumnModelDTO" nillable="true" type="tns:ArrayOfDatatablesColumnModelDTO" />
+  <xs:complexType name="DatatablesColumnModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orderable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="search" nillable="true" type="tns:DatatablesColumnSearchModelDTO" />
+      <xs:element minOccurs="0" name="searchable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatatablesColumnModelDTO" nillable="true" type="tns:DatatablesColumnModelDTO" />
+  <xs:complexType name="DatatablesColumnSearchModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="regex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatatablesColumnSearchModelDTO" nillable="true" type="tns:DatatablesColumnSearchModelDTO" />
+  <xs:complexType name="ArrayOfDatatablesOrderModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatatablesOrderModelDTO" nillable="true" type="tns:DatatablesOrderModelDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatatablesOrderModelDTO" nillable="true" type="tns:ArrayOfDatatablesOrderModelDTO" />
+  <xs:complexType name="DatatablesOrderModelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="column" type="xs:int" />
+      <xs:element minOccurs="0" name="dir" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatatablesOrderModelDTO" nillable="true" type="tns:DatatablesOrderModelDTO" />
+  <xs:complexType name="DatatablesResponseModelDTOOfLojaDTOYsip9d3Q">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DatatablesResponseModelDTOOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.DataTables" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LojaDTO" Namespace="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.Loja" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DDona.Relatorios.DTO.Loja" minOccurs="0" name="data" nillable="true" type="q1:ArrayOfLojaDTO" />
+      <xs:element minOccurs="0" name="draw" type="xs:int" />
+      <xs:element minOccurs="0" name="recordsFiltered" type="xs:int" />
+      <xs:element minOccurs="0" name="recordsTotal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatatablesResponseModelDTOOfLojaDTOYsip9d3Q" nillable="true" type="tns:DatatablesResponseModelDTOOfLojaDTOYsip9d3Q" />
+</xs:schema>

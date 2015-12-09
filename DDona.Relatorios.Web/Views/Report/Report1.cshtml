@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Relatório de Lojas";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Nota</th>
+            <th>Investimento</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Nome</th>
+            <th>Nota</th>
+            <th>Investimento</th>
+        </tr>
+    </tfoot>
+</table>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "searching": false,
+                "ajax": {
+                    "url": "@Url.Action("Report1", "Report")",
+                    "type": "POST"
+                },
+                "columns": [
+                    {
+                        "data": "Nome",
+                        "name": "L.NOME"
+                    },
+                    {
+                        "data": "Nota",
+                        "name": "L.NOTA"
+                    },
+                    {
+                        "data": "Investimento",
+                        "name": "L.INVESTIMENTO"
+                    }
+                ]
+            });
+        });
+    </script>
+}

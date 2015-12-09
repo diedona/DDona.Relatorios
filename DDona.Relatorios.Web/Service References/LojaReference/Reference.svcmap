@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="846d6428-66e8-4161-872c-93bc11b80151" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c2241fd1-1c55-4d70-8a24-5990bac93b97" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5e897331-1365-4088-b558-adc30a50e4dc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3aea4f9b-62b1-4b52-82b1-0aeaffacb01f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" />
+    <MetadataFile FileName="DDona.Relatorios.DTO.DataTables.xsd" MetadataType="Schema" ID="4bdd39ee-91ef-4f88-84b4-e3a10f820efa" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" />
+    <MetadataFile FileName="DDona.Relatorios.DTO.Loja.xsd" MetadataType="Schema" ID="33ff3261-9761-42d8-81f1-e4d0e183a130" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Relatorios.Wcf.Loja/Loja/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
