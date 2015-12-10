@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DDona.Relatorios.Web.ViewModel.PDF.PdfFakeResult>
+
+@{
+    Layout = null;
+}
+
+@Html.Partial("~/Views/Shared/Impressao/_EstiloImpressao.cshtml")
+@*<style>table th,td.center{text-align:center}body{font-family:'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif}table{width:100%;border:1px solid grey;border-spacing:0}table tr td{border:1px solid #a3a3a3}table th{font-weight:700;background-color:#c6c6c6}</style>*@
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Data Nascimento</th>
+        <th>Estado</th>
+        <th>Grau de Investimento</th>
+        <th>Saldo</th>
+    </tr>
+    @foreach (var Item in Model)
+    {
+        <tr>
+            <td class="center">@Item.Nome</td>
+            <td class="center">@Item.DataNascimento.ToShortDateString()</td>
+            <td class="center">@Item.Estado</td>
+            <td class="center">@Item.GrauInvestimento</td>
+            <td class="center">@Item.Saldo.ToString("C2")</td>
+        </tr>
+    }
+</table>

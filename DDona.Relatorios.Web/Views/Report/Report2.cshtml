@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Relatório em PDF";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm("Report2", "Report", FormMethod.Post, new { id = "frmReport2", @class = "form-inline", target = "_blank" }))
+        {
+            <div class="form-group">
+                <label for="exampleInputEmail1">Quantas Linhas</label>
+                <input type="text" class="form-control" id="QtdItens" name="QtdItens" value="60000" placeholder="Digite a quantidade de linhas">
+            </div>
+
+            <div class="form-group">
+                <label>Debug no console</label>
+                <input type="checkbox" value="1" id="chkDebug" class="" />
+            </div>
+
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <button type="submit" class="form-control btn btn-success">
+                    <i class="glyphicon glyphicon-ok-sign"></i> Go
+                </button>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+
+            $("#frmReport2").on('submit', function (e) {
+
+                if ($("#chkDebug").is(":checked")) {
+                    e.preventDefault();
+
+                    var $form = $(this);
+                    var url = $form.prop('action');
+                    console.log(url);
+
+                    var data = $form.serialize();
+
+                    var start = new Date().getTime();
+                    var end = null;
+                    console.log('Start');
+
+                    $.post(url, data, function (data) {
+                        //console.log('SUCCESS');
+                        //console.log(data);
+                        end = new Date().getTime();
+                        printTime(start, end);
+                    })
+                    .fail(function (e) {
+                        end = new Date().getTime();
+                        printTime(start, end);
+                    })
+                    .always(function () {
+                        console.log('End');
+                    });
+                }
+
+            });
+
+        });
+
+        function printTime(start, end)
+        {
+            var time = end - start;
+            console.log('Execution time (ms): ' + time);
+        }
+    </script>
+}
